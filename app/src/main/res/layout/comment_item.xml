@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/comment_item_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="user name" />
+
+    <RelativeLayout
+        android:id="@+id/comment_item_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/comment_item_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/like_on" />
+
+        <TextView
+            android:id="@+id/comment_item_upvotes"
+            style="@style/positive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/comment_item_like"
+            android:text="+100" />
+
+        <ImageView
+            android:id="@+id/comment_item_dislike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/comment_item_upvotes"
+            android:src="@drawable/dislike_on" />
+
+        <TextView
+            android:id="@+id/comment_item_reply_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:text="Reply"
+            android:textColor="#607D8B"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:id="@+id/comment_item_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/comment_item_reply_text"
+            android:src="@drawable/reply" />
+
+        <TextView
+            android:id="@+id/comment_item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/comment_item_reply"
+            android:text="12/15/1990"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/comment_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/comment_item_date"
+            android:layout_toLeftOf="@id/comment_item_reply"
+            android:text="15:00"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/comment_item_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/comment_item_options"
+        android:layout_below="@id/comment_item_username"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:text="content" />
+
+    <ListView
+        android:id="@+id/comment_item_comments_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comment_item_options"
+        android:layout_marginLeft="15dp" />
+
+</RelativeLayout>

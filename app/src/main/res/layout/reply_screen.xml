@@ -1,5 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/reply_screen_title"
+        style="@style/discussion_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="title" />
+
+    <RelativeLayout
+        android:id="@+id/reply_screen_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <Button
+            android:id="@+id/comment_item_reply_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/reply"
+            android:text="Reply"
+            android:textColor="#607D8B"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/reply_screen_response"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:hint="@string/reply_hint"
+        android:inputType="textCapSentences|textMultiLine"
+        android:lines="4"
+        android:maxLength="2000"
+        android:maxLines="7"
+        android:scrollHorizontally="false" />
+
+    <TextView
+        android:id="@+id/reply_screen_content"
+        style="@style/discussion_item_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/reply_screen_response"
+        android:layout_below="@id/reply_screen_title"
+        android:text="content" />
 </RelativeLayout>

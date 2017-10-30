@@ -17,4 +17,11 @@
     <string name="login_title2">Talk</string>
     <string name="login_screen_user_hint">User name</string>
     <string name="login_screen_password_hint">Password</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="firstname">First name</string>
+    <string name="lastname">Last name</string>
+    <string name="email">Email</string>
+    <string name="passwordConfirm">Password confirm</string>
+    <string name="cancel">cancel</string>
 </resources>

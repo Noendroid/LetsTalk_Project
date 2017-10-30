@@ -4,10 +4,12 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="loginUsername">#2E7D32</color>
+    <color name="username">#2E7D32</color>
     <color name="loginPassword">#01579B</color>
     <color name="contentBackground">#CFD8DC</color>
     <color name="loginButtonText">#ECEFF1</color>
     <color name="login_title1">#ECEFF1</color>
     <color name="login_title1b">#43A047</color>
+    <color name="subject">#558B2F</color>
+    <color name="other">#F44336</color>
 </resources>

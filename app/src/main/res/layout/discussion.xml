@@ -23,6 +23,18 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:text="21/05/1998\t15:30" />
+
+        <TextView
+            android:id="@+id/discussion_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/discussion_date"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:background="#ECEFF1"
+            android:text="@string/content" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -60,9 +72,9 @@
 
     <ListView
         android:id="@+id/discussion_comments_listview"
-        android:layout_below="@id/discussion_options"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/discussion_options">
 
     </ListView>
 

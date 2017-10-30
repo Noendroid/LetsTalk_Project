@@ -20,7 +20,10 @@
         android:drawableStart="@drawable/reply"
         android:layout_alignParentBottom="true"
         android:text="@string/reply_button"
+        android:background="@drawable/layout_reply"
         android:textColor="#607D8B"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
         android:textSize="15sp" />
 
 

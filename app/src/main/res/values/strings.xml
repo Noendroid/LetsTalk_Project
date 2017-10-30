@@ -24,4 +24,6 @@
     <string name="email">Email</string>
     <string name="passwordConfirm">Password confirm</string>
     <string name="cancel">cancel</string>
+    <string name="username">User name</string>
+    <string name="search">Search</string>
 </resources>

@@ -6,41 +6,42 @@
     android:layout_height="match_parent"
     tools:context="com.igal.letstalk.HomeDiscussions">
 
+    <ImageButton
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/search" />
+
     <EditText
         android:id="@+id/search_box"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp" />
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/search_button"
+        android:backgroundTint="@color/username"
+        android:hint="@string/search"
+        android:textColor="@color/username" />
 
-    <LinearLayout
-        android:id="@+id/search_type"
+    <!--
+        must change later for
+        layout_height="wrap_content"
+        -->
+    <GridView
+        android:id="@+id/search_options_gridview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@id/search_box"
-        android:gravity="center">
+        android:numColumns="3">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/sym_action_chat" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/star_off" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_menu_sort_by_size" />
-    </LinearLayout>
+    </GridView>
 
     <ListView
         android:id="@+id/listview_discussion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/search_type"></ListView>
+        android:layout_below="@id/search_options_gridview"></ListView>
 
 </RelativeLayout>

@@ -26,7 +26,6 @@
         android:paddingLeft="8dp"
         android:textSize="15sp" />
 
-
     <EditText
         android:id="@+id/reply_screen_response"
         android:layout_width="match_parent"

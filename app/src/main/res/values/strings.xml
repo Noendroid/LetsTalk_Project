@@ -12,6 +12,10 @@
 
     <string name="login_text">Login</string>
 
+    <string name="hot">whats hot</string>
+    <string name="rated">top rated</string>
+    <string name="discussed">most discussed</string>
+
     <string name="title_show">Title</string>
     <string name="login_title1">Lets</string>
     <string name="login_title2">Talk</string>

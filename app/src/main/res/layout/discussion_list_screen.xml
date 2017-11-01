@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,24 +7,43 @@
     android:layout_height="match_parent"
     tools:context="com.igal.letstalk.HomeDiscussions">
 
-    <ImageButton
-        android:id="@+id/search_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/search" />
-
-    <EditText
-        android:id="@+id/search_box"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/discussion_list_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_toLeftOf="@id/search_button"
-        android:backgroundTint="@color/username"
-        android:hint="@string/search"
-        android:textColor="@color/username" />
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <RelativeLayout
+        android:id="@+id/discussion_list_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/discussion_list_toolbar">
+
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/search" />
+
+        <EditText
+            android:id="@+id/search_box"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="text"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:maxLines="1"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/search_button"
+            android:backgroundTint="@color/username"
+            android:hint="@string/search"
+            android:textColor="@color/username" />
+
+    </RelativeLayout>
 
     <!--
         must change later for
@@ -33,7 +53,7 @@
         android:id="@+id/search_options_gridview"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@id/search_box"
+        android:layout_below="@id/discussion_list_search"
         android:numColumns="3">
 
     </GridView>
@@ -43,5 +63,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/search_options_gridview"></ListView>
+
 
 </RelativeLayout>

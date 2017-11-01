@@ -2,6 +2,9 @@ package com.igal.letstalk;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.GridView;
 import android.widget.ListView;
 
@@ -21,5 +24,30 @@ public class HomeDiscussions extends AppCompatActivity {
         HomeDiscussionsAdapter homeDiscussionsAdapter = new HomeDiscussionsAdapter(this);
 
         discussions.setAdapter(homeDiscussionsAdapter);
+
+        android.support.v7.widget.Toolbar toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.discussion_list_toolbar);
+
+        setSupportActionBar(toolbar);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.discussion_list_toolbar_items, menu);
+        return true;
+    }
+
+    // here will be defined the actions for each button in the menu
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.discussion_list_action_add:
+//                start an intent to post
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
+
     }
 }

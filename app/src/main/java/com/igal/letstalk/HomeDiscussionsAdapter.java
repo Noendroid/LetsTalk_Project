@@ -20,7 +20,7 @@ public class HomeDiscussionsAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 5;
+        return 15;
     }
 
     @Override

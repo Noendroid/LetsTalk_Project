@@ -69,15 +69,34 @@
         android:backgroundTint="@color/loginPassword"
         android:gravity="center"
         android:hint="@string/login_screen_password_hint"
+        android:inputType="textPassword"
         android:textColor="@color/loginPassword" />
 
-    <Button
-        android:layout_width="wrap_content"
+
+    <RelativeLayout
+        android:id="@+id/login_buttons"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/layout_login"
-        android:text="@string/login_text"
-        android:textColor="@color/loginButtonText" />
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/login_button_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_login_register"
+            android:text="@string/register"
+            android:textColor="@color/loginButtonText" />
+
+        <Button
+            android:id="@+id/login_button_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@id/login_button_register"
+            android:background="@drawable/layout_login"
+            android:text="@string/login_text"
+            android:textColor="@color/loginButtonText" />
+
+    </RelativeLayout>
 </RelativeLayout>

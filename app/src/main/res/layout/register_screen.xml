@@ -126,26 +126,31 @@
         android:maxLength="25"
         android:textColor="@color/username" />
 
-    <Button
-        android:id="@+id/register_button_confirm"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/register_buttons"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/layout_register"
-        android:text="@string/register"
-        android:textColor="@color/loginButtonText" />
+        android:layout_below="@id/register_screen_password_confirm"
+        android:gravity="center">
 
-    <Button
-        android:id="@+id/register_button_cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/layout_cancel"
-        android:text="@string/cancel"
-        android:textColor="@color/loginButtonText" />
+        <Button
+            android:id="@+id/register_button_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_cancel"
+            android:text="@string/cancel"
+            android:textColor="@color/loginButtonText" />
+
+        <Button
+            android:id="@+id/register_button_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/register_button_cancel"
+            android:background="@drawable/layout_register"
+            android:text="@string/register"
+            android:textColor="@color/loginButtonText" />
+
+    </RelativeLayout>
+
 
 </RelativeLayout>

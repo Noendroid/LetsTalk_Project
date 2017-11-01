@@ -1,5 +1,6 @@
 package com.igal.letstalk;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -47,6 +48,8 @@ public class HomeDiscussions extends AppCompatActivity {
 
             case R.id.discussion_list_action_logout:
 //                logout the user
+                Intent logoutIntent = new Intent(this, LoginActivity.class);
+                startActivity(logoutIntent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

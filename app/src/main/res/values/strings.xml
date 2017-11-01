@@ -31,4 +31,5 @@
     <string name="username">User name</string>
     <string name="search">Search</string>
     <string name="add">Post</string>
+    <string name="logout">Logout</string>
 </resources>

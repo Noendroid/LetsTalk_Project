@@ -44,6 +44,10 @@ public class HomeDiscussions extends AppCompatActivity {
             case R.id.discussion_list_action_add:
 //                start an intent to post
                 return true;
+
+            case R.id.discussion_list_action_logout:
+//                logout the user
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
 

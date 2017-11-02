@@ -33,7 +33,6 @@
             android:layout_marginRight="5dp"
             android:paddingRight="15dp"
             android:paddingLeft="15dp"
-            android:background="#ECEFF1"
             android:text="@string/content" />
     </RelativeLayout>
 
@@ -48,7 +47,7 @@
 
         <ImageView
             android:id="@+id/discussion_like"
-            android:layout_width="wrap_content"
+            android:layout_width="20dp"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:src="@drawable/like_on" />
@@ -63,7 +62,7 @@
 
         <ImageView
             android:id="@+id/discussion_dislike"
-            android:layout_width="wrap_content"
+            android:layout_width="20dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:src="@drawable/dislike_on" />

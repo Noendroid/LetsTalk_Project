@@ -6,28 +6,38 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ListView;
 
-public class HomeDiscussions extends AppCompatActivity {
+public class HomeDiscussionsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.discussion_list_screen);
 
+//        options adapter
         GridView options = (GridView) findViewById(R.id.search_options_gridview);
         HomeOptionsAdapter homeOptionsAdapter = new HomeOptionsAdapter(this);
-
         options.setAdapter(homeOptionsAdapter);
 
+//        discussions adapter
         ListView discussions = (ListView) findViewById(R.id.listview_discussion);
         HomeDiscussionsAdapter homeDiscussionsAdapter = new HomeDiscussionsAdapter(this);
-
         discussions.setAdapter(homeDiscussionsAdapter);
+        discussions.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(view.getContext(), DiscussionActivity.class);
+                intent.putExtra("title", "" + i);
+                startActivity(intent);
+            }
+        });
 
+//        toolbar
         android.support.v7.widget.Toolbar toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.discussion_list_toolbar);
-
         setSupportActionBar(toolbar);
     }
 

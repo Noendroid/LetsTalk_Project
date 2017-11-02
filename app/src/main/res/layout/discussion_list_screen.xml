@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.igal.letstalk.HomeDiscussions">
+    tools:context="com.igal.letstalk.HomeDiscussionsActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/discussion_list_toolbar"

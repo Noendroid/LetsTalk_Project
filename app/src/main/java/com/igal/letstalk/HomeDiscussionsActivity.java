@@ -30,7 +30,7 @@ public class HomeDiscussionsActivity extends AppCompatActivity {
         discussions.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(view.getContext(), DiscussionActivity.class);
+                Intent intent = new Intent(view.getContext(), HomeDiscussionsActivity.class);
                 intent.putExtra("title", "" + i);
                 startActivity(intent);
             }

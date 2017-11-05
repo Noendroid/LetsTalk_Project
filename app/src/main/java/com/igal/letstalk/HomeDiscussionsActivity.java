@@ -27,14 +27,6 @@ public class HomeDiscussionsActivity extends AppCompatActivity {
         ListView discussions = (ListView) findViewById(R.id.listview_discussion);
         HomeDiscussionsAdapter homeDiscussionsAdapter = new HomeDiscussionsAdapter(this);
         discussions.setAdapter(homeDiscussionsAdapter);
-        discussions.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(view.getContext(), HomeDiscussionsActivity.class);
-                intent.putExtra("title", "" + i);
-                startActivity(intent);
-            }
-        });
 
 //        toolbar
         android.support.v7.widget.Toolbar toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.discussion_list_toolbar);

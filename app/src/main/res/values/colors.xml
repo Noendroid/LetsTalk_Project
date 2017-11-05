@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#A5D6A7</color>
     <color name="colorAccent">#FF4081</color>
 
+    <color name="transparent">#00000000</color>
+
     <color name="username">#2E7D32</color>
     <color name="loginPassword">#01579B</color>
     <color name="contentBackground">#CFD8DC</color>
@@ -12,4 +14,5 @@
     <color name="login_title1b">#43A047</color>
     <color name="subject">#558B2F</color>
     <color name="other">#F44336</color>
+    <color name="replyInputBackground">#ECEFF1</color>
 </resources>

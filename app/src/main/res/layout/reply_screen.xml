@@ -1,51 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/reply_screen_title"
-        style="@style/discussion_item_title"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/reply_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/title" />
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-
-    <Button
-        android:id="@+id/reply_screen_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:drawableStart="@drawable/reply"
-        android:layout_alignParentBottom="true"
-        android:text="@string/reply_button"
-        android:background="@drawable/layout_reply"
-        android:textColor="#607D8B"
-        android:paddingRight="8dp"
-        android:paddingLeft="8dp"
-        android:textSize="15sp" />
-
-    <EditText
-        android:id="@+id/reply_screen_response"
+    <RelativeLayout
+        android:id="@+id/reply_screen_body"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:hint="@string/reply_hint"
-        android:inputType="textCapSentences|textMultiLine"
-        android:lines="4"
-        android:gravity="start"
-        android:maxLength="2000"
-        android:layout_toStartOf="@id/reply_screen_button"
-        android:maxLines="7"
-        android:scrollHorizontally="false" />
+        android:layout_height="match_parent"
+        android:layout_below="@id/reply_toolbar">
 
-    <TextView
-        android:id="@+id/reply_screen_content"
-        style="@style/discussion_item_content"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/reply_screen_response"
-        android:layout_below="@id/reply_screen_title"
-        android:text="@string/content" />
+        <TextView
+            android:id="@+id/reply_screen_title"
+            style="@style/discussion_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/title" />
+
+        <TextView
+            android:id="@+id/reply_screen_content"
+            style="@style/discussion_item_content"
+            android:layout_width="match_parent"
+            android:textSize="15sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reply_screen_title"
+            android:text="@string/content" />
+
+        <EditText
+            android:id="@+id/reply_screen_response"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reply_screen_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/replyInputBackground"
+            android:gravity="start"
+            android:hint="@string/reply_hint"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="2000"
+            android:scrollHorizontally="false" />
+
+
+    </RelativeLayout>
+
 </RelativeLayout>

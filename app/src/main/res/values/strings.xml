@@ -32,4 +32,6 @@
     <string name="search">Search</string>
     <string name="add">Post</string>
     <string name="logout">Logout</string>
+    <string name="post_hint">Write your reply here</string>
+    <string name="post_title">Post title</string>
 </resources>

@@ -25,6 +25,9 @@
         <activity android:name=".DiscussionActivity" />
         <activity
             android:name=".ReplyActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".PostActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
     </application>
 

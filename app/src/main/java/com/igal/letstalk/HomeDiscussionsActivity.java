@@ -46,6 +46,8 @@ public class HomeDiscussionsActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.discussion_list_action_add:
 //                start an intent to post
+                Intent postIntent = new Intent(this, PostActivity.class);
+                startActivity(postIntent);
                 return true;
 
             case R.id.discussion_list_action_logout:
